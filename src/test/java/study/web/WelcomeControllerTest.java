@@ -1,4 +1,4 @@
-package study;
+package study.web;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class IndexTest {
+public class WelcomeControllerTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -18,7 +18,8 @@ public class IndexTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		WelcomeController wc = new WelcomeController();
+		wc.welcome();
 	}
 
 }
