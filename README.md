@@ -1,5 +1,5 @@
 # Springproject
-##스프링 프로젝트 실습 1
+## 스프링 프로젝트 실습 1
 
 * Repository(GitHub 저장소) 생성
 * pom.xml 초기화 (Maven 프로젝트화)
@@ -9,14 +9,14 @@
   - logback.xml 추가
 * IndexTest.java 생성 (테스트 라이브러리 추가, Junit4)
 
-##[Problems]
+## [Problems]
 
 1. Java compiler level does not match the version of the installed Java project facet.
 -> 메뉴 Preferences에서  Java Build Path, Java Compiler, Project Facets 자바 버전을 일치 시킨다.
 2. web.xml is missing and <failOnMissingWebXml> is set to truepom.xml
 -> pom.xml에 Properties 태그에 <failOnMissingWebXml>false</failOnMissingWebXml> 추가한다.  
 
-##스프링 프로젝트 실습 2
+## 스프링 프로젝트 실습 2
 
 * 서블릿 페이지 생성 및 확인
   - study.web.WelcomeServlet.java
@@ -27,7 +27,7 @@
 * 부트스트랩 적용
   - css/fonts/js 폴더 및 스크립트 추가
   
-##[Issues]
+## [Issues]
  
 1. WAS 서버(Tomcat)인식 위한 컴파일 경로 변경
 -> Java Build Path : webapp/WEB-INF/classes
