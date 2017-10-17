@@ -34,4 +34,7 @@
 2. STS(플러그인), 탬플릿 엔진 필요?
 -> Spring Boot, Mustache, Bootstrap
 
+## 스프링 프로젝트 실습 3
+
+* GitHub 저장소 계정 추가 및 브랜치 사용
   
