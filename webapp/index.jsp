@@ -6,6 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Spring Project 실습</h1>
+<h1>Spring Project 실습 (index.jsp)</h1>
 </body>
 </html>
