@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class WelcomeController {
 	private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
 
-	@RequestMapping("/index")
+	@RequestMapping("/index.sps")
 	public @ResponseBody ModelAndView index() {
 		ModelAndView mv = new ModelAndView("index");
 		
@@ -20,7 +20,7 @@ public class WelcomeController {
 		return mv;
 	}
 
-	@RequestMapping("/come")
+	@RequestMapping("/come.sps")
 	public @ResponseBody String welcome() {
 		log.debug("Spring Project Start!!");
 		
