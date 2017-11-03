@@ -37,9 +37,18 @@
 ## 스프링 프로젝트 실습 3
 
 * GitHub 저장소 계정 추가 및 브랜치 사용
-* web.xml 생성
-  - context-param, listener, servlet, welcom-file-list 태그 추가
-* servlet-context.xml 변경
+* web.xml 변경
+  - context-param, listener, servlet, welcom-file-list, filter 태그 추가
+* config/servlet-context.xml 변경
   - 기존 default-servlet.xml 치환 (webapp/WEB-INF)
   - webapp/WEB-INF/spring/appServlet 경로 변경
-  
+* spring/datasource-context.xml 생성
+  - Mybatis와 DB 연결 설정
+* spring/sqlmap-context.xml 생성
+  - Mybatis와 Spring 연결 설정
+
+## [Issues]
+
+1. 환경 설정 파일 경로 지정
+2. 패키지 구조 정리
+-> layer 우선?, 모듈 우선?
