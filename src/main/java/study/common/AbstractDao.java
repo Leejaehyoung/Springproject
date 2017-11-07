@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import study.web.WelcomeController;
 
-public class AbstractDAO {
+public class AbstractDao {
 	private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
     
     @Autowired

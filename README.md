@@ -38,8 +38,15 @@
 
 * GitHub 저장소 계정 추가 및 브랜치 사용
 * web.xml 생성
-  - context-param, listener, servlet, welcom-file-list 태그 추가
-* servlet-context.xml 변경
+  - context-param, listener, servlet, welcom-file-list, filter 태그 추가
+* config/servlet-context.xml 변경
   - 기존 default-servlet.xml 치환 (webapp/WEB-INF)
   - webapp/WEB-INF/spring/appServlet 경로 변경
+* spring/datasource-context.xml 생성
+  - Mybatis와 데이터베이스 연결 설정
+* spring/sqlmap-context.xml 생성
+  - Mybatis와 Spring 연결 설정
+    
+  
+  
   
