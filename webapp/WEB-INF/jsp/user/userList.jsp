@@ -59,8 +59,8 @@
 								<c:when test="${fn:length(list) > 0}">
 									<c:forEach items="${list }" var="row">
 										<tr>
-											<td>${row.mbrNm }</td>
 											<td>${row.mbrId }</td>
+											<td>${row.mbrNm }</td>
 											<td>${row.email }</td>
 											<td>${row.regDtime }</td>
 										</tr>

@@ -19,7 +19,7 @@
     WHERE MBR_NO = #{mbrNo,jdbcType=INTEGER}
   </select>
 
-  <select id="selectUserList" parameterType="map" resultMap="BaseResultMap">
+  <select id="selectUserList" parameterType="java.util.Map" resultMap="BaseResultMap">
     SELECT *
     FROM CS_MBR_BASE_INFO
   </select>
