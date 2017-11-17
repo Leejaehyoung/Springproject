@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="study.web.user.dao.UserDao">
+  <resultMap id="BaseResultMap" type="study.web.user.vo.UserVo">
+    <id column="MBR_NO" jdbcType="INTEGER" property="mbrNo" />
+    <result column="MBR_ID" jdbcType="VARCHAR" property="mbrId" />
+    <result column="MBR_NM" jdbcType="VARCHAR" property="mbrNm" />
+    <result column="PASSWD" jdbcType="VARCHAR" property="passwd" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="REG_ID" jdbcType="VARCHAR" property="regId" />
+    <result column="REG_DTIME" jdbcType="TIMESTAMP" property="regDtime" />
+    <result column="MOD_ID" jdbcType="VARCHAR" property="modId" />
+    <result column="MOD_DTIME" jdbcType="TIMESTAMP" property="modDtime" />
+  </resultMap>
 
-<mapper namespace="org.mybatis.example.UserMapper">
-  <select id="selectUser" resultType="study.web.user.vo.UserVo">
-    SELECT * FROM CS_USER_BASE_INFO WHERE USR_ID = #{id}
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT *
+    FROM CS_MBR_BASE_INFO
+    WHERE MBR_NO = #{mbrNo,jdbcType=INTEGER}
   </select>
-</mapper>
+
+  <select id="selectUserList" parameterType="map" resultMap="BaseResultMap">
+    SELECT *
+    FROM CS_MBR_BASE_INFO
+  </select>
+</mapper>  

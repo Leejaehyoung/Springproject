@@ -16,7 +16,7 @@
 	
 	<!-- View(V) 를 JSP 파일로 선택하여 해석해 보여준다   -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
-	p:prefix="/" p:suffix=".jsp">
+	p:prefix="/WEB-INF/jsp/" p:suffix=".jsp">
 	</bean>
 	
 	<!-- 컨트롤러 호출하기 전/후에 실행하는 인터셉터 설정  -->

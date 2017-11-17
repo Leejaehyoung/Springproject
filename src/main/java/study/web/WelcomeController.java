@@ -11,11 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class WelcomeController {
 	private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
 
-	@RequestMapping("/index.sps")
+	@RequestMapping("/main.sps")
 	public @ResponseBody ModelAndView index() {
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("main");
 		
-		log.debug("Index Test");
+		log.debug("Main Test");
 		
 		return mv;
 	}

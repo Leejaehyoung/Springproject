@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration 
+	PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar" />
+
+	<context id="context1">
+		<jdbcConnection connectionURL="jdbc:mysql://1.255.57.126:3306/spring"
+			driverClass="com.mysql.jdbc.Driver" password="springpass" userId="springuser" />
+		<javaModelGenerator targetPackage="study.gen.vo"
+			targetProject="Springproject" />
+		<sqlMapGenerator targetPackage="study.gen.xml"
+			targetProject="Springproject" />
+		<javaClientGenerator targetPackage="study.gen.dao"
+			targetProject="Springproject" type="XMLMAPPER" />
+		<table schema="spring" tableName="CS_MBR_BASE_INFO">
+			<!-- <columnOverride column="???" property="???" /> -->
+		</table>
+	</context>
+</generatorConfiguration>

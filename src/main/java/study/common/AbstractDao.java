@@ -7,10 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import study.web.WelcomeController;
-
 public class AbstractDao {
-	private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
+	private static final Logger log = LoggerFactory.getLogger(AbstractDao.class);
     
     @Autowired
     private SqlSessionTemplate sqlSession;

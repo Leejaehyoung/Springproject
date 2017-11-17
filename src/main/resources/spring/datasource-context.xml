@@ -7,9 +7,9 @@
     <!-- Mybatis와 데이터베이스 연결 설정 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://주소/스키마"/>
-        <property name="username" value="아이디"/>
-        <property name="password" value="비밀번호"/>
+        <property name="url" value="jdbc:mysql://1.255.57.126:3306/spring"/>
+        <property name="username" value="springuser"/>
+        <property name="password" value="springpass"/>
     </bean>
 
 </beans>

@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>스프링 프로젝트</title>
 </head>
 <body>
-<h1>Spring Project 실습 (index.jsp)</h1>
+<h1>Spring Project 실습 (main.jsp)</h1>
 </body>
 </html>
