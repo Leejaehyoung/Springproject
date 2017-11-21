@@ -68,9 +68,9 @@
 * study/common/resolver/CustomMapArgumentResolver.java
 * sevlet-context.xml
 
-*. study/web/user/controller/UserController.java
-*. study/web/user/service/UserService.java, UserServiceImpl.java
-*. study/web/user/dao/UserDao.java, AbstractAao.java
-*. study/web/user/vo/UserVo.java
-*. sqlmap/user_sql.xml
+* study/web/user/controller/UserController.java
+* study/web/user/service/UserService.java, UserServiceImpl.java
+* study/web/user/dao/UserDao.java, AbstractAao.java
+* study/web/user/vo/UserVo.java
+* sqlmap/user_sql.xml
   
