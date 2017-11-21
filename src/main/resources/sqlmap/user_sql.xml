@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="study.web.user.dao.UserDao">
+<mapper namespace="User">
   <resultMap id="BaseResultMap" type="study.web.user.vo.UserVo">
     <id column="MBR_NO" jdbcType="INTEGER" property="mbrNo" />
     <result column="MBR_ID" jdbcType="VARCHAR" property="mbrId" />
@@ -13,14 +13,63 @@
     <result column="MOD_DTIME" jdbcType="TIMESTAMP" property="modDtime" />
   </resultMap>
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.util.Map" resultMap="BaseResultMap">
+    <![CDATA[
     SELECT *
     FROM CS_MBR_BASE_INFO
-    WHERE MBR_NO = #{mbrNo,jdbcType=INTEGER}
+    WHERE MBR_NO = #{mbrNo}
+    ]]>
   </select>
 
   <select id="selectUserList" parameterType="java.util.Map" resultMap="BaseResultMap">
+    <![CDATA[
     SELECT *
     FROM CS_MBR_BASE_INFO
+    ]]>
   </select>
+  
+  <insert id="insert" parameterType="java.util.Map">
+    <![CDATA[
+    INSERT INTO CS_MBR_BASE_INFO (
+      MBR_ID, MBR_NM, PASSWD, EMAIL, REG_ID, MOD_ID
+      )
+    VALUES (#{mbrId,jdbcType=VARCHAR}, #{mbrNm,jdbcType=VARCHAR}, #{passwd,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{regId,jdbcType=VARCHAR}, #{modId,jdbcType=VARCHAR}
+      )
+    ]]>
+  </insert>
+
+  <update id="update" parameterType="java.util.Map">
+    UPDATE CS_MBR_BASE_INFO
+    <set>
+      <if test="mbrId != null">
+        MBR_ID = #{mbrId,jdbcType=VARCHAR},
+      </if>
+      <if test="mbrNm != null">
+        MBR_NM = #{mbrNm,jdbcType=VARCHAR},
+      </if>
+      <if test="passwd != null">
+        PASSWD = #{passwd,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="regId != null">
+        REG_ID = #{regId,jdbcType=VARCHAR},
+      </if>
+      <if test="modId != null">
+        MOD_ID = #{modId,jdbcType=VARCHAR},
+      </if>
+      MOD_DTIME = NOW()
+    WHERE MBR_NO = #{mbrNo,jdbcType=INTEGER}  
+    </set>
+  </update>
+  
+  <delete id="delete" parameterType="java.util.Map">
+    <![CDATA[
+    DELETE FROM CS_MBR_BASE_INFO
+    WHERE MBR_NO = #{mbrNo,jdbcType=INTEGER}
+    ]]>
+  </delete>
+  
 </mapper>  

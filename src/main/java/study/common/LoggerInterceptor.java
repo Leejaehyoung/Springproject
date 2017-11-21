@@ -8,10 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import study.web.WelcomeController;
-
 public class LoggerInterceptor extends HandlerInterceptorAdapter {
-	private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
+	private static final Logger log = LoggerFactory.getLogger(LoggerInterceptor.class);
 	
 	
 	@Override

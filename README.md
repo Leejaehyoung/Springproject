@@ -46,7 +46,31 @@
   - Mybatis와 데이터베이스 연결 설정
 * spring/sqlmap-context.xml 생성
   - Mybatis와 Spring 연결 설정
-    
-  
-  
+
+## 스프링 프로젝트 실습 4
+
+## [DB Template]
+
+[Generator]
+* plugin
+* generatorConfig.xml
+* study/gen/dao
+   study/gen/vo
+   study/gen/xml
+
+[Code]
+* /Theme/pages/forms/general.html
+* /Theme/pages/tables/dats.html
+* /WEB-INF/include/header.jspf
+* /WEB-INF/include/footer.jspf
+
+* study/common/CommandMap.java
+* study/common/resolver/CustomMapArgumentResolver.java
+* sevlet-context.xml
+
+*. study/web/user/controller/UserController.java
+*. study/web/user/service/UserService.java, UserServiceImpl.java
+*. study/web/user/dao/UserDao.java, AbstractAao.java
+*. study/web/user/vo/UserVo.java
+*. sqlmap/user_sql.xml
   
