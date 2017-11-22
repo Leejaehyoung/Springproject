@@ -54,15 +54,14 @@
 [Generator]
 * plugin
 * generatorConfig.xml
-* study/gen/dao
-   study/gen/vo
-   study/gen/xml
+* study/gen/dao, study/gen/vo, study/gen/xml
 
 [Code]
-* /Theme/pages/forms/general.html
-* /Theme/pages/tables/dats.html
+* /Theme/pages/forms/general.html 템플릿 이용
+* /Theme/pages/tables/data.html 템플릿 이용
 * /WEB-INF/include/header.jspf
 * /WEB-INF/include/footer.jspf
+* /WEB-INF/jsp/user/userList.jsp, userDetail.jsp, userInsert.jsp
 
 * study/common/CommandMap.java
 * study/common/resolver/CustomMapArgumentResolver.java
