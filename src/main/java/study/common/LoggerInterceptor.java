@@ -2,6 +2,7 @@ package study.common;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,19 @@ public class LoggerInterceptor extends HandlerInterceptorAdapter {
 			throws Exception {
 		if (log.isDebugEnabled()) {
 			log.debug("#################### Start");
+		}
+		
+		/* 세션 존재 유무 확인 */
+		HttpSession httpSession = request.getSession();
+		log.debug("#################### httpSession : " + httpSession);
+		if(httpSession == null || httpSession.getAttribute("key") == null) {
+			String redirectUrl = request.getRequestURI(); // http:www.study.net/contextPath/xxx.sps (/contextPaht/xxx.sps)
+			if(request.getQueryString() != null) {
+				redirectUrl += "?" + request.getQueryString();
+			}
+			response.sendRedirect("/login.sps?url=" + redirectUrl);
+			
+			return false;
 		}
 
 		return true;

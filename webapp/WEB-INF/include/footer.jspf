@@ -20,6 +20,8 @@
 <script src="/Theme/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="/Theme/plugins/fastclick/fastclick.js"></script>
+<!-- iCheck -->
+<script src="/Theme/plugins/iCheck/icheck.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/Theme/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->

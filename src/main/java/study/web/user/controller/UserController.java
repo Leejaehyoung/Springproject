@@ -90,6 +90,14 @@ public class UserController {
 		return mv;
 	}
 
+	// 로그인 화면 보기
+	@RequestMapping(value="/login.sps")
+	public @ResponseBody ModelAndView login(CommandMap commandMap) {
+	    ModelAndView mv = new ModelAndView("login/login");
+	
+	    return mv;
+	}
+
 	// 사용자 정보 로그 확인용
 	private void commandEntry(CommandMap commandMap) {
 		if(commandMap.isEmpty() == false){

@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="/Theme/plugins/datatables/dataTables.bootstrap.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/Theme/dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+  <link rel="stylesheet" href="/Theme/plugins/iCheck/square/blue.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="/Theme/dist/css/skins/_all-skins.min.css">
