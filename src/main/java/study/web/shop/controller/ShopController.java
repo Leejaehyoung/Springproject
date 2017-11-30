@@ -17,7 +17,8 @@ import study.web.shop.vo.Shop;
 @Controller
 @RequestMapping(value = "/shop")
 public class ShopController {
-	@Resource
+	@Resource(name="annotationShopService")
+//	@Resource
 	private ShopService shopService;
 
 	/* 가게 목록 조회 */

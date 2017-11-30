@@ -7,19 +7,26 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import study.web.shop.dao.ShopDao;
+import study.web.shop.dao.ShopMapper;
 import study.web.shop.vo.Shop;
 
-@Service
-public class ShopServiceImpl implements ShopService {
+@Service("annotationShopService")
+public class AnnotationShopServiceImpl implements ShopService {
+	
+	
+	public AnnotationShopServiceImpl() {
+		super();
+		System.out.println("AnnotationShopServiceImpl");
+	}
+
 	@Resource
-	private ShopDao shopDao;
+	private ShopMapper shopMapper;
 
 	/* 가게 목록 조회 */
 	@Override
 	public List<Shop> find(Shop shop) {
 		// 데이터 접근 객체 호출
-		return this.shopDao.list(shop);
+		return shopMapper.list(shop);
 	}
 
 	/* 가게 목록 조회 */
@@ -27,14 +34,14 @@ public class ShopServiceImpl implements ShopService {
 	@Transactional
 	public void add(Shop shop) {
 		// 데이터 접근 객체 호출
-		this.shopDao.insert(shop);
+		this.shopMapper.insert(shop);
 	}
 
 	/* 가게 조회 */
 	@Override
 	public Shop view(String shopNo) {
 		// 데이터 접근 객체 호출
-		return this.shopDao.select(shopNo);
+		return this.shopMapper.select(shopNo);
 	}
 
 	/* 가게 수정 */
@@ -42,7 +49,7 @@ public class ShopServiceImpl implements ShopService {
 	@Transactional
 	public void edit(Shop shop) {
 		// 데이터 접근 객체 호출
-		this.shopDao.update(shop);
+		this.shopMapper.update(shop);
 	}
 
 	/* 가게 삭제 */
@@ -50,6 +57,6 @@ public class ShopServiceImpl implements ShopService {
 	@Transactional
 	public void remove(String shopNo) {
 		// 데이터 접근 객체 호출
-		this.shopDao.delete(shopNo);
+		this.shopMapper.delete(shopNo);
 	}
 }
