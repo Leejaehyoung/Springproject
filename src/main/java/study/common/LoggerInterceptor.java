@@ -19,8 +19,8 @@ public class LoggerInterceptor extends HandlerInterceptorAdapter {
 		if (log.isDebugEnabled()) {
 			log.debug("#################### Start");
 		}
-		
-		/* 세션 존재 유무 확인 */
+/*		
+		 세션 존재 유무 확인 
 		HttpSession httpSession = request.getSession();
 		log.debug("#################### httpSession : " + httpSession);
 		if(httpSession == null || httpSession.getAttribute("key") == null) {
@@ -32,7 +32,7 @@ public class LoggerInterceptor extends HandlerInterceptorAdapter {
 			
 			return false;
 		}
-
+*/
 		return true;
 	}
 
